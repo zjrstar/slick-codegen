@@ -21,9 +21,9 @@ sourceGenerators in Compile <+= slickCodeGenTask
 lazy val slick = TaskKey[Seq[File]]("gen-tables")
 lazy val slickCodeGenTask = (sourceManaged, dependencyClasspath in Compile, runner in Compile, streams) map { (dir, cp, r, s) =>
   val outputDir = (dir / "main/slick").getPath
-  val username = "user"
-  val password = "password"
-  val url = "jdbc:mysql://localhost/slick"
+  val username = "ebdev"
+  val password = "000000"
+  val url = "jdbc:mysql://localhost/test"
 val jdbcDriver = "com.mysql.jdbc.Driver"
   val slickDriver = "slick.driver.MySQLDriver"
   val pkg = "me.arnaudtanguy.models"
